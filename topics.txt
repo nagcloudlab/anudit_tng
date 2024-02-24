@@ -1,0 +1,165 @@
+
+-------------------------------------------------------
+What we will cover in this course
+-------------------------------------------------------
+
+- whats makes web-ui
+- challenges web-ui
+- lib & frameworks overview
+
+- react
+- react + next.js ( popular choice)
+- state management ( redux )
+
+-------------------------------------------------------
+pre-requisite
+-------------------------------------------------------
+- HTML
+- CSS
+- javascript / typescript
+-------------------------------------------------------
+
+
+-------------------------------------------------------
+What makes web-ui
+-------------------------------------------------------
+
+UI = data + style + interaction
+Web-UI = HTML + CSS + javascript
+
+how to to make dynamic web-ui?
+
+using browser's web-APIs, javascript can bring
+interaction to HTML page
+
+browser's web-APIs
+
+- DOM ( Document Object Model )
+- XHR ( XML Http Request )
+- Fetch API
+....
+
+- w3c standards
+
+browser vendors implement these standards using native code,
+and expose them to javascript using web-APIs
+
+=> javascript + web-APIs = dynamic web-ui
+
+-------------------------------------------------------
+what are the challenges in web-ui
+-------------------------------------------------------
+
+
+-> browser compatibility issues
+-> performance issues  ( i.e Minimal DOM footprint )
+-> memory leaks ( i.e clean un-used DOM elements, event listeners )
+-> code organization ( i.e modular, reusable, maintainable )
+-> code re-usability ( i.e components )
+...
+
+-------------------------------------------------------
+solution-1 : server-side page technologies
+-------------------------------------------------------
+
+- jsp, asp, php, ..
+
+limitations:
+
+-> on every req, server-side should re-generate entire page
+-> on every response, browser should reload current page
+-> transfering same static resources ( i.e HTML, CSS, JS ) on every req , increases network traffic
+
+-------------------------------------------------------
+solution-2 : client-side page technologies
+-------------------------------------------------------
+
+
+- Modern javascript 
+- Modern browsers
+- Modern web-APIs ( HTML5 .. )
++
+- lib & frameworks
+
+
+-------------------------------------------------------
+lib & frameworks overview
+-------------------------------------------------------
+
+- jquery
+
+
+mvc ( model-view-controller ) pattern based lib
+
+- backbone.js
+- knockout.js
+- ember.js
+- dojo
+- ext-js
+- angular.js ( google community )
+..
+
+component pattern based lib & frameworks
+
+- react ( facebook community )
+- angular ( google community )
+- vue.js
+...
+
+-------------------------------------------------------
+libraries vs frameworks
+-------------------------------------------------------
+
+lib : collection of reusable functions
+framework : collection of reusable components
+
+-------------------------------------------------------
+
+how to run javascript code ?
+
+  -> js engine  / interpreter
+
+
+browser 
+-----------
+1. chrome => v8 ( c++)
+2. firefox => spidermonkey ( c++ )
+3. safari => javascriptcore ( c++ )
+4. edge => chakra ( c++ )
+
+other envi
+-----------
+1. node.js => v8 ( c++ )
+    => to build console/server based applications using javascript
+2. JRE ( java runtime environment ) => nashorn ( java )
+
+-------------------------------------------------------
+
+to create react app
+
+1. using create-react-app tool
+
+    npx create-react-app my-app
+    cd my-app
+    npm start
+
+-------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
