@@ -1,11 +1,12 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import Review from "./Review"
 import ReviewForm from "./ReviewForm_v2"
+import CartContext from "../contexts/CartContext"
 
 
 function Product(props) {
-
-    let { onBuy, product } = props
+    const { cart, dispatch } = useContext(CartContext)
+    let { product } = props
     const [currentTab, setCurrentTab] = useState(1)
 
     const [reviews, setReviews] = useState([
@@ -19,9 +20,11 @@ function Product(props) {
     }
 
     const handleBuy = () => {
-        if (onBuy) {
-            onBuy(product)
+        const action = {
+            type: "ADD_ITEM",
+            payload: product
         }
+        dispatch(action)
     }
 
     const handleNewReview = (review) => {
@@ -50,6 +53,9 @@ function Product(props) {
             default: return null
         }
     }
+
+    const isItemInCart = cart.find(item => item.id === product.id)
+
     return (
         <div className="row">
             <div className="col-4">
@@ -58,7 +64,7 @@ function Product(props) {
             <div className="col-8">
                 <div>{product.name}</div>
                 <div>&#8377;{product.price}</div>
-                <button onClick={handleBuy} className="btn btn-primary">Add to Cart</button>
+                <button disabled={isItemInCart} onClick={handleBuy} className="btn btn-primary">Add to Cart</button>
                 <ul className="mt-2 nav nav-tabs">
                     <li className="nav-item">
                         <a onClick={e => handleTabChange(e, 1)} className={`nav-link ${currentTab === 1 ? 'active' : ''}`} href="/">Description</a>

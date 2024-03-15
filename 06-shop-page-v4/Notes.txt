@@ -1,0 +1,87 @@
+
+
+--------------------------------------------------
+how to manage state in react ?
+--------------------------------------------------
+
+on component,
+
+    - useState
+    - useReducer
+
+    - prop drilling
+    - lifting state up
+    - context api
+  
+
+challenges managing state over component?
+
+ -> state scattered over component(s)
+ -> state is not shared between components
+
+
+ solution:
+
+ -> using external state management libraries 
+    like redux, mobx, recoil, etc.
+
+--------------------------------------------------    
+
+
+steps to use Redux in react app:
+
+
+1. Know UI's state
+
+    e.g ship-IT
+
+    - products
+    - cart
+    - user
+    - orders
+    ...
+
+2. Know actions to change state
+
+    e.g cart
+
+    - add product
+    - remove product
+    - update product
+    - clear cart
+
+
+3. process actions using reducers
+    - cartReducer
+    - userReducer
+    - productReducer
+    - orderReducer
+    ..
+
+4. create store
+
+    - store is a place to store state
+
+
+5. subscribe store to get state changes
+6. dispatch actions to change state
+
+--------------------------------------------------
+
+    1. install redux and react-redux
+    2. create store
+    3. create actions
+    4. create reducers
+    5. create store provider
+    6. connect store to react app
+
+
+-------------------------------------------------
+
+
+
+
+
+
+
+
